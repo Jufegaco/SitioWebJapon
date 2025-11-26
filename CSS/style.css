@@ -1,0 +1,351 @@
+/* Encabezado general */
+header {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* Menú con efecto zoom */  /*le da un pequeño efecto de acercamiento al pasar el mouse por cada una de las ooociones del menu*/
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 0 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+/* Tipografías usadas en cada pagina y subpagina*/
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Press Start 2P', cursive;
+  margin: 1rem 0;
+}
+nav a:hover {
+  transform: scale(1.2);   /* efecto de zoom */
+  color: #ff793b;          /* cambia color al pasar el mouse */
+}
+/* Encabezados con bordes redondeados */
+header {
+  border-radius: 0 0 20px 20px; /* hace que las esquinas inferiores sean curvas en cada encabezado */
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Banner principal */
+.banner img {
+  width: 100%;          
+  height: 250px;        
+  object-fit: cover;    
+  display: block;
+  border: none;
+  border-radius: 0;
+  text-align: center;
+}
+
+/* Banner con bordes redondeados */
+.banner {
+  width: 100%;
+  max-height: 250px;  
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px; /* permite que los bordes sean redondeados para un mejor estilo visual */
+}
+
+/*  Banners por página */
+.banner-rojo {
+  background-color: #e60012;
+  color: white;
+}
+
+.banner-amarillo {
+  background-color: #ffcc00;
+  color: black;
+}
+
+.banner-azul {
+  background-color: #004aad;
+  color: white;
+}
+
+.banner-morado {
+  background-color: #8000ff;
+  color: white;
+}
+
+/* Listas de los personajes con sus descripciones */
+.personajes {
+  list-style-type: none;   
+  padding: 0;
+  margin: 0 auto 2rem;
+  max-width: 800px;        
+  text-align: left;
+}
+
+.personajes li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.personajes li strong {
+  color: #8000ff;          /* Resalta las letras de los nombres de los personajes */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Contenido del sitio */
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.galeria img {
+  max-width: 180px;
+  border: 3px solid #000;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.1);
+}
+
+
+/* Imágenes de la galería con efecto zoom y bordes redondeados */
+.galeria img {
+  border-radius: 15px;   
+  transition: transform 0.3s ease;
+}
+p {
+  text-align: justify;   
+  margin-bottom: 1.2rem; 
+}
+
+.personajes li, 
+.personaje {
+  margin-bottom: 1.5rem;   
+  line-height: 1.6;        
+  text-align: justify;     
+}
+
+.personajes strong, 
+.personaje strong {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.galeria img {
+  width: 200px;        
+  height: 250px;       
+  object-fit: cover;   
+  border-radius: 15px; 
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.1); /* zoom al pasar el mouse */
+}
+.galeria img {
+  width: 200px;
+  height: 250px;
+  object-fit: contain;  
+  border-radius: 15px;
+  margin: 10px;
+  background: rgb(140, 76, 243);    
+  border: 2px solid black;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Skip link */
+.skip-link {
+  position: fixed;
+  top: 8px;                  
+  left: 8px;                  
+  background: #000;
+  color: #fff;
+  padding: 0.2rem 0.5rem;      
+  border-radius: 4px;         
+  font-size: 0.6rem;          
+  font-family: "Press Start 2P", sans-serif;
+  text-decoration: none;
+  z-index: 1000;
+  box-shadow: 0 0 5px 1px rgba(255, 191, 71, 0.6); 
+  transition: all 0.3s ease-in-out;
+  opacity: 0.9;
+}
+
+/* Hover/focus mas notorio */
+.skip-link:hover,
+.skip-link:focus {
+  background: #222;
+  color: #ffbf47;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 2px rgba(255, 191, 71, 1);
+}
+
+/* ==== AJUSTE GENERAL RESPONSIVO ==== */
+
+/* Asegura que todo el sitio escale bien */
+html {
+  font-size: 100%; /* Escala base (equivale a 16px, pero flexible) */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden; /* Evita barras horizontales */
+}
+
+/* Banner principal */
+header {
+  width: 100%;
+  padding: 2vw; /* Usa % relativo al ancho de la pantalla */
+  border-radius: 0;
+}
+
+header h1 {
+  font-size: clamp(1rem, 4vw, 2rem); /* Ajuste automático: min, medio, max */
+  line-height: 1.3;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* Menú flexible */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap: 1rem;
+  margin: 0;
+}
+
+nav li {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+/* Asegura que las imágenes nunca se salgan */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==== MEDIA QUERIES ==== */
+
+/* Móviles pequeños */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: clamp(0.9rem, 5vw, 1.2rem);
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .personaje {
+    width: 90%;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  header h1 {
+    font-size: clamp(1rem, 4vw, 1.8rem);
+  }
+
+  .personaje {
+    width: 45%;
+  }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1025px) {
+  .personaje {
+    width: 30%;
+  }
+}
+
+/* ==== CORRECCIÓN DE CORTE EN BANNER ==== */
+header {
+  display: flex;
+  flex-direction: column;   /* Asegura que el texto y menú estén apilados */
+  justify-content: center;
+  align-items: center;
+  padding: 2vw;             /* Espaciado relativo */
+  background-color: inherit; /* Mantiene tu color original (rojo, azul, etc.) */
+  width: 100%;
+  height: auto;              /* 🔥 Elimina altura fija */
+  min-height: fit-content;   /* Se adapta al contenido */
+  overflow: visible;         /* 🔥 Evita que se corte */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+header h1 {
+  font-size: clamp(1rem, 4vw, 2rem); /* Escala automáticamente según pantalla */
+  line-height: 1.3;
+  word-wrap: break-word;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+/* Ajuste extra para pantallas pequeñas */
+@media (max-width: 600px) {
+  header {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: clamp(0.9rem, 5vw, 1.3rem);
+  }
+}
